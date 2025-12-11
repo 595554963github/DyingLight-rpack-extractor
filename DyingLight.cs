@@ -1,4 +1,4 @@
-﻿using System.Globalization;
+using System.Globalization;
 using Applib;
 using zlib;
 using System.Text;
@@ -155,7 +155,7 @@ namespace DyingLight
                 string filenameChunkStr = Encoding.ASCII.GetString(filenameChunk);
 
                 string? directoryName = Path.GetDirectoryName(path);
-                string extractFolder = Path.Combine(directoryName ?? Environment.CurrentDirectory, Path.GetFileNameWithoutExtension(path) + "_extracted");
+                string extractFolder = Path.Combine(directoryName ?? Environment.CurrentDirectory, Path.GetFileNameWithoutExtension(path));
                 Directory.CreateDirectory(extractFolder);
 
                 Dictionary<int, byte[]> sectionFiles = new Dictionary<int, byte[]>();
